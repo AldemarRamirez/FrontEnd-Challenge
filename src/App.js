@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Route, Routes} from 'react-router-dom';
+import Consulta from './pages/Consulta';
+import Almacenar from './pages/Almacenar';
+import NotFoundPage from './pages/NotFoundPage';
+import Navegacion from './componentes/Navegacion';
+import Home from './pages/Home';
+import './App.css'
+import './spinkit.css'
 
-function App() {
+// Rutas del proyecto
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Navegacion />
+      <Routes>
+        <Route path="/" element={<Home/>}/>
+        <Route path="/consulta" element={<Consulta/>}/>
+        <Route path="/almacenar" element={<Almacenar/>}/>
+        <Route path="*" element={<NotFoundPage/>}/>
+      </Routes>
+    </BrowserRouter>
   );
 }
-
-export default App;

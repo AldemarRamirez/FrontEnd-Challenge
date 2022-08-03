@@ -1,0 +1,45 @@
+.selecionado {
+    color: #282828;
+    font-weight: bold;
+}
+
+.no_selecionado {
+    color:white;
+    font-weight: bold;
+}
+
+.barra_navegacion{
+    display: grid;
+    grid-template-columns: 220px 220px;
+    grid-template-rows: 60px;
+    height: 100%;
+    width: 100%;
+    list-style:none;
+    justify-items: center;
+    align-items: center;
+
+}
+
+.barra_navegacion_item1{
+    grid-column: 1/2;
+    grid-row: 1
+}
+
+.barra_navegacion_item2{
+    grid-column: 2/3;
+    grid-row: 1;
+    border-left: 2px;
+}
+
+li{ 
+    background-color: #c39f77;
+    border-color: #282828;
+    border-width: 2px;
+    border-style: solid;
+    font-size: 20px;
+    height: 60px;
+    width: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
